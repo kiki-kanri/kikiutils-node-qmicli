@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"baseUrl": "./",
+		"declaration": true,
+		"esModuleInterop": true,
+		"module": "CommonJS",
+		"outDir": "./lib",
+		"paths": {
+			"@/*": [
+				"src/*"
+			]
+		},
+		"skipLibCheck": false,
+		"strict": true,
+		"target": "ESNext"
+	},
+	"exclude": [
+		"**/__tests__/*",
+		"node_modules"
+	],
+	"include": [
+		"src"
+	]
+}
