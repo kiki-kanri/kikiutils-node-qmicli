@@ -24,12 +24,11 @@ export const parseResult = (result: string, options?: ParseOption) => {
 	if (!options.splitChar) options.splitChar = ': ';
 	const data: Dict<any> = {};
 	const lines = result.trim().split('\n');
-
 	for (const line of lines) {
 		const [key, value] = line.trim().split(options.splitChar);
 		if (!value) continue;
 		let parsedValue: number | string = value.replace(/^'|'$/gi, '');
-		if (isNumeric(parsedValue)) parsedValue = parseFloat(parsedValue);
+		if (key.match(/iccid|imei|imsi/gi) === null && isNumeric(parsedValue)) parsedValue = parseFloat(parsedValue);
 		if (options.parseFunc) parsedValue = options.parseFunc(parsedValue);
 		data[key] = parsedValue;
 	}
