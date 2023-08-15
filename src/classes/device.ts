@@ -1,4 +1,8 @@
-import { Dms, Exec, Nas, Wda, Wds } from '.';
+import Dms from './dms';
+import Exec from './exec';
+import Nas from './nas';
+import Wda from './wda';
+import Wds from './wds';
 
 export class Device extends Exec {
 	dms: Dms;
