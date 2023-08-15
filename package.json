@@ -1,6 +1,6 @@
 {
   "name": "kikiutils-qmicli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Qmicli utils.",
   "license": "MIT",
   "author": "kiki-kanri",
@@ -12,14 +12,15 @@
   "bugs": {
     "url": "https://github.com/kiki-kanri/node-qmicli/issues"
   },
-  "type": "commonjs",
-  "main": "./lib/index.js",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
   "files": [
     "./lib/**/*"
   ],
   "scripts": {
-    "build": "tsc && tsc-alias"
+    "build": "rm -rf ./lib && tsc -b ./tsconfig.*.json && tsc-alias -p ./tsconfig.cjs.json && tsc-alias -p ./tsconfig.esm.json && tsc-alias -p ./tsconfig.types.json"
   },
+  "typings": "./lib/types/index.d.ts",
   "dependencies": {
     "@cjs-exporter/camelcase-keys": "^8.0.2",
     "@esm2cjs/execa": "6.1.1-cjs.1",
