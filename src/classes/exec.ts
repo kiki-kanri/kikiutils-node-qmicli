@@ -1,6 +1,6 @@
 import { execaCommand } from '@esm2cjs/execa';
 
-export default class Exec {
+export class Exec {
 	async qmicli(command: string) {
 		return await this.exec(`sudo qmicli -p ${command}`);
 	}
@@ -9,3 +9,5 @@ export default class Exec {
 		return (await execaCommand(command, { shell: true })).stdout.trim();
 	}
 }
+
+export default Exec;

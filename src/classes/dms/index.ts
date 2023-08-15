@@ -2,7 +2,7 @@ import { parseResult } from '@/library/utils';
 import Device from '../device';
 import { Capabilities, Ids, Manufacturer, Model, Revision } from './types';
 
-export default class Dms {
+export class Dms {
 	device: Device;
 
 	constructor(device: Device) {
@@ -58,3 +58,5 @@ export default class Dms {
 		return await this.device.qmicli(`--dms-set-operating-mode="${mode}"`);
 	}
 }
+
+export default Dms;

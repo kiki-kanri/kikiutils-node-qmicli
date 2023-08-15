@@ -1,6 +1,6 @@
 import Device from './device';
 
-export default class Wda {
+export class Wda {
 	device: Device;
 
 	constructor(device: Device) {
@@ -12,3 +12,5 @@ export default class Wda {
 		return result.includes('raw-ip');
 	}
 }
+
+export default Wda;

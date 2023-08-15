@@ -3,7 +3,7 @@ import { Nullable } from '@/types';
 import Device from '../device';
 import { StartNetworkOptions } from './types';
 
-export default class Wds {
+export class Wds {
 	device: Device;
 	packetDataHandle?: number;
 
@@ -57,3 +57,5 @@ export default class Wds {
 		return this.packetDataHandle = parseInt(handleMatch[1]);
 	}
 }
+
+export default Wds;

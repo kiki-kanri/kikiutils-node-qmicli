@@ -9,7 +9,7 @@ import {
 	TechnologyPreference
 } from './types';
 
-export default class Nas {
+export class Nas {
 	device: Device;
 
 	constructor(device: Device) {
@@ -64,3 +64,5 @@ export default class Nas {
 		return parseResult(result) as TechnologyPreference;
 	}
 }
+
+export default Nas;

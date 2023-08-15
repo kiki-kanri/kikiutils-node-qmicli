@@ -1,6 +1,6 @@
 import { Dms, Exec, Nas, Wda, Wds } from '.';
 
-export default class Device extends Exec {
+export class Device extends Exec {
 	dms: Dms;
 	interfaceName?: string;
 	name: string;
@@ -29,3 +29,5 @@ export default class Device extends Exec {
 		return await this.exec(`sudo qmicli -p -d ${this.path} ${command}`);
 	}
 }
+
+export default Device;
