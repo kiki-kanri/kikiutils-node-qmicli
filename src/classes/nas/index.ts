@@ -1,4 +1,4 @@
-import { parseResult } from '../../library/utils';
+import { parseResult } from '@/library/utils';
 import Device from '../device';
 import {
 	CellLocationInfo,
@@ -7,7 +7,7 @@ import {
 	SystemInfo,
 	SystemSelectionPreference,
 	TechnologyPreference
-} from './typing';
+} from './types';
 
 export default class Nas {
 	device: Device;

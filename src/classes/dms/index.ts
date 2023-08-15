@@ -1,12 +1,6 @@
-import { parseResult } from '../../library/utils';
+import { parseResult } from '@/library/utils';
 import Device from '../device';
-import {
-	Capabilities,
-	Ids,
-	Manufacturer,
-	Model,
-	Revision
-} from './typing';
+import { Capabilities, Ids, Manufacturer, Model, Revision } from './types';
 
 export default class Dms {
 	device: Device;

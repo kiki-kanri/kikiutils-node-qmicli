@@ -1,3 +1,5 @@
+import { NullableString } from '@/types';
+
 export interface Capabilities {
 	dataService: string;
 	maxRxChannelRate: number;
@@ -18,7 +20,7 @@ export interface Manufacturer {
 }
 
 export interface Model {
-	model: string | null;
+	model: NullableString;
 }
 
 export interface Revision {

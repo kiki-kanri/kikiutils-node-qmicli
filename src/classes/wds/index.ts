@@ -1,8 +1,7 @@
-import { processParams } from '../../library/utils';
+import { processParams } from '@/library/utils';
+import { Nullable } from '@/types';
 import Device from '../device';
-import {
-	StartNetworkOptions
-} from './typing';
+import { StartNetworkOptions } from './types';
 
 export default class Wds {
 	device: Device;
@@ -15,7 +14,7 @@ export default class Wds {
 	/**
 	 * Get autoconnect settings.
 	 */
-	async getAutoConnectSetting(): Promise<'disabled' | 'enabled' | 'paused' | null> {
+	async getAutoConnectSetting(): Promise<Nullable<'disabled' | 'enabled' | 'paused'>> {
 		const result = await this.device.qmicli('--wds-get-autoconnect-settings');
 		const resultMatch = result.match(/'(.*)'/);
 		if (!resultMatch) return null;
@@ -25,7 +24,7 @@ export default class Wds {
 	/**
 	 * Get packet service status.
 	 */
-	async getPacketServiceStatus(): Promise<'connected' | 'disconnected' | null> {
+	async getPacketServiceStatus(): Promise<Nullable<'connected' | 'disconnected'>> {
 		const result = await this.device.qmicli('--wds-get-packet-service-status');
 		const resultMatch = result.match(/'(.*)'/);
 		if (!resultMatch) return null;

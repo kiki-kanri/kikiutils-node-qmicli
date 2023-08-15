@@ -1,7 +1,7 @@
 import camelcaseKeys from '@cjs-exporter/camelcase-keys';
 import { paramCase } from 'param-case';
 
-import { Dict } from '../typing';
+import { Dict } from '@/types';
 
 interface ParseOption {
 	splitChar?: string;

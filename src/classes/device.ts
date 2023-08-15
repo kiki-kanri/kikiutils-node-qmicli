@@ -25,7 +25,7 @@ export default class Device extends Exec {
 		return this.interfaceName;
 	}
 
-	async qmicli(command: string) {
+	override async qmicli(command: string) {
 		return await this.exec(`sudo qmicli -p -d ${this.path} ${command}`);
 	}
 }
