@@ -52,7 +52,7 @@ export class Wds {
 		if (!options.autoconnect) options.autoconnect = 'no';
 		const params = processParams(options);
 		const result = await this.device.qmicli(`--wds-start-network="${params}"`);
-		const handleMatch = result.replaceAll('\n', '').match(/'([0-9]*)/);
+		const handleMatch = result.replace(/\n/g, '').match(/'([0-9]*)/);
 		if (!handleMatch) return null;
 		return this.packetDataHandle = parseInt(handleMatch[1]);
 	}
