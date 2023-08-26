@@ -29,6 +29,7 @@
     "param-case": "^3.0.4"
   },
   "devDependencies": {
+    "@kikiutils/tsconfigs": "^0.1.1",
     "@types/fs-extra": "^11.0.1",
     "rollup": "^3.28.1",
     "rollup-plugin-delete": "^2.0.0",
