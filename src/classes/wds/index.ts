@@ -53,7 +53,7 @@ export class Wds {
 		const params = processParams(options);
 		const result = await this.device.qmicli(`--wds-start-network="${params}"`);
 		const handleMatch = result.replace(/\n/g, '').match(/'([0-9]*)/);
-		if (!handleMatch) return null;
+		if (!handleMatch?.[1]) return null;
 		return this.packetDataHandle = parseInt(handleMatch[1]);
 	}
 }
