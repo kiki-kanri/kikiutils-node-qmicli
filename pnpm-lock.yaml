@@ -14,9 +14,9 @@ dependencies:
   fs-extra:
     specifier: ^11.1.1
     version: 11.1.1
-  param-case:
-    specifier: ^4.0.0
-    version: 4.0.0
+  lodash:
+    specifier: ^4.17.21
+    version: 4.17.21
 
 devDependencies:
   '@kikiutils/tsconfigs':
@@ -25,6 +25,9 @@ devDependencies:
   '@types/fs-extra':
     specifier: ^11.0.2
     version: 11.0.2
+  '@types/lodash':
+    specifier: ^4.14.199
+    version: 4.14.199
   ts-project-builder:
     specifier: ^1.0.3
     version: 1.0.3(esbuild@0.19.4)
@@ -364,6 +367,10 @@ packages:
       '@types/node': 20.8.0
     dev: true
 
+  /@types/lodash@4.14.199:
+    resolution: {integrity: sha512-Vrjz5N5Ia4SEzWWgIVwnHNEnb1UE1XMkvY5DGXrAeOGE9imk0hgTHh5GyDjLDJi9OTCn9oo9dXH1uToK1VRfrg==}
+    dev: true
+
   /@types/node@17.0.45:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: true
@@ -590,6 +597,10 @@ packages:
       graceful-fs: 4.2.11
     dev: false
 
+  /lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: false
+
   /lru-cache@6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
@@ -624,11 +635,6 @@ packages:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
 
-  /no-case@4.0.0:
-    resolution: {integrity: sha512-WmS3EUGw+vXHlTgiUPi3NzbZNwH6+uGX0QLGgqG+aFSJ5rkX/Ee0nuwHBJfZTfQwwR8lGO819NEIwQ7CGhkdEQ==}
-    deprecated: Use `change-case`
-    dev: false
-
   /node-releases@2.0.13:
     resolution: {integrity: sha512-uYr7J37ae/ORWdZeQ1xxMJe3NtdmqMC/JZK+geofDrkLUApKRHPd18/TxtBOJ4A0/+uUIliorNrfYV6s1b02eQ==}
     dev: true
@@ -637,13 +643,6 @@ packages:
     resolution: {integrity: sha512-YJjNZrlXJFM42wTBn6zgOJVar9KFJvzx6sTWDte8sWZF//cnjl0BxHNpfZx+ZffXX63A9q0b1zsFiBX4g4X5KA==}
     engines: {node: '>= 10.12.0'}
     dev: true
-
-  /param-case@4.0.0:
-    resolution: {integrity: sha512-+kVIBemYVaPPzBX6Z9FcBvaY0YSIBxD1fyShn6P3HkWOIbsOkT8OmEgLrQSaAHRDyYKdu7YH5RRiACiJLSJ2pw==}
-    deprecated: Use `change-case`
-    dependencies:
-      no-case: 4.0.0
-    dev: false
 
   /parse-ms@3.0.0:
     resolution: {integrity: sha512-Tpb8Z7r7XbbtBTrM9UhpkzzaMrqA2VXMT3YChzYltwV3P3pM6t8wl7TvpMnSTosz1aQAdVib7kdoys7vYOPerw==}

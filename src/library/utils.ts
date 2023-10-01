@@ -1,5 +1,5 @@
 import camelcaseKeys from '@cjs-exporter/camelcase-keys';
-import { paramCase } from 'param-case';
+import { kebabCase } from 'lodash';
 
 import { Dict } from '@/types';
 
@@ -38,7 +38,7 @@ export const parseResult = (result: string, options?: ParseOption) => {
 
 export const processParams = (options: Dict<any>) => {
 	let params = '';
-	for (const key in options) params += `${paramCase(key)}=${options[key]},`;
+	for (const key in options) params += `${kebabCase(key)}=${options[key]},`;
 	return params.slice(0, -1);
 }
 
