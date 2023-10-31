@@ -29,6 +29,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@kikiutils/prettierrc": "^1.0.4",
     "@kikiutils/tsconfigs": "^1.0.0",
     "@types/fs-extra": "^11.0.3",
     "@types/lodash": "^4.14.200",
@@ -40,5 +41,6 @@
     "modem",
     "modem-manager",
     "qmicli"
-  ]
+  ],
+  "prettier": "@kikiutils/prettierrc"
 }
