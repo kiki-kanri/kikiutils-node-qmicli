@@ -10,13 +10,13 @@ interface ParseOption {
 
 export const isNumeric = (data: any) => {
 	return !isNaN(parseFloat(data)) && isFinite(data) && parseFloat(data) == data;
-}
+};
 
 export const defaultParseValue = (value: any) => {
 	if (value === 'yes') return true;
 	if (value === 'no') return false;
 	return value;
-}
+};
 
 export const parseResult = (result: string, options?: ParseOption) => {
 	if (!options) options = {};
@@ -34,13 +34,13 @@ export const parseResult = (result: string, options?: ParseOption) => {
 	}
 
 	return sortDictKey(camelcaseKeys(data) as Dict<any>);
-}
+};
 
 export const processParams = (options: Dict<any>) => {
 	let params = '';
 	for (const key in options) params += `${kebabCase(key)}=${options[key]},`;
 	return params.slice(0, -1);
-}
+};
 
 export const sortDictKey = <T>(data: Dict<T>): Dict<T> => {
 	const sorted = [];
@@ -50,4 +50,4 @@ export const sortDictKey = <T>(data: Dict<T>): Dict<T> => {
 	for (const key of sorted) tmpDict[key] = data[key];
 	for (const key in tmpDict) if (tmpDict[key] && tmpDict[key].constructor === Object) tmpDict[key] = sortDictKey(tmpDict[key]);
 	return tmpDict;
-}
+};

@@ -84,7 +84,7 @@ export interface SystemSelectionPreference {
 	'gsm/wcdmaAcquisitionOrderPreference': string;
 	acquisitionOrderPreference: string;
 	bandPreference: string;
-	emergencyMode: boolean,
+	emergencyMode: boolean;
 	lteBandPreference: string;
 	modePreference: string;
 	networkSelectionPreference: string;

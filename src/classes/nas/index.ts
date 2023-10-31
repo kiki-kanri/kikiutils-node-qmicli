@@ -1,13 +1,6 @@
 import { parseResult } from '@/library/utils';
 import Device from '../device';
-import {
-	CellLocationInfo,
-	HomeNetwork,
-	ServingSystem,
-	SystemInfo,
-	SystemSelectionPreference,
-	TechnologyPreference
-} from './types';
+import { CellLocationInfo, HomeNetwork, ServingSystem, SystemInfo, SystemSelectionPreference, TechnologyPreference } from './types';
 
 export class Nas {
 	device: Device;

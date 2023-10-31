@@ -46,15 +46,15 @@ export class Wds {
 	 */
 	async startNetwork(options: StartNetworkOptions) {
 		if (this.packetDataHandle) return this.packetDataHandle;
-		if (await this.getAutoConnectSetting() === 'enabled') return false;
-		if (await this.getPacketServiceStatus() === 'connected') return true;
+		if ((await this.getAutoConnectSetting()) === 'enabled') return false;
+		if ((await this.getPacketServiceStatus()) === 'connected') return true;
 		if (options.autoconnect === true) options.autoconnect = 'yes';
 		if (!options.autoconnect) options.autoconnect = 'no';
 		const params = processParams(options);
 		const result = await this.device.qmicli(`--wds-start-network="${params}"`);
 		const handleMatch = result.replace(/\n/g, '').match(/'([0-9]*)/);
 		if (!handleMatch?.[1]) return null;
-		return this.packetDataHandle = parseInt(handleMatch[1]);
+		return (this.packetDataHandle = parseInt(handleMatch[1]));
 	}
 }
 
