@@ -29,10 +29,10 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@kikiutils/tsconfigs": "^0.2.1",
-    "@types/fs-extra": "^11.0.2",
-    "@types/lodash": "^4.14.199",
-    "ts-project-builder": "^1.0.3",
+    "@kikiutils/tsconfigs": "^1.0.0",
+    "@types/fs-extra": "^11.0.3",
+    "@types/lodash": "^4.14.200",
+    "ts-project-builder": "^2.0.1",
     "typescript": "^5.2.2"
   },
   "keywords": [
